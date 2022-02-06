@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.address-validator.net/api/verify?APIKey=<ADDRESS_VALIDATOR_API_KEY>&City=Columbus&CountryCode=us&PostalCode=43215&StreetAddress=123%20e%20Maine%20Street
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.address-validator.net
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 06 Feb 2022 15:04:24 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Content-Location:
+      - verify.json
+      Vary:
+      - negotiate
+      Tcn:
+      - choice
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Access-Control-Max-Age:
+      - '86400'
+      Content-Length:
+      - '355'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"status":"SUSPECT","ratelimit_remain":97,"ratelimit_seconds":114,"cost":1.0,"formattedaddress":"123
+        E Main St,Columbus OH 43215-5207","addressline1":"123 E Main St","addresslinelast":"Columbus
+        OH 43215-5207","street":"E Main St","streetnumber":"123","postalcode":"43215-5207","city":"Columbus","state":"OH","country":"US","county":"Franklin","type":"S"}
+
+        '
+  recorded_at: Sun, 06 Feb 2022 15:04:24 GMT
+recorded_with: VCR 6.0.0

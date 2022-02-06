@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.address-validator.net/api/verify?APIKey=<ADDRESS_VALIDATOR_API_KEY>&City=Place&CountryCode=us&PostalCode=11111&StreetAddress=1%20My%20St
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.address-validator.net
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Feb 2022 21:47:57 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Content-Location:
+      - verify.json
+      Vary:
+      - negotiate
+      Tcn:
+      - choice
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Access-Control-Max-Age:
+      - '86400'
+      Content-Length:
+      - '263'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"status":"INVALID","ratelimit_remain":98,"ratelimit_seconds":300,"cost":1.0,"formattedaddress":"1
+        My St,Place 11111","addressline1":"1 My St","addresslinelast":"Place 11111","street":"My
+        St","streetnumber":"1","postalcode":"11111","city":"Place","country":"US"}
+
+        '
+  recorded_at: Tue, 01 Feb 2022 21:47:57 GMT
+recorded_with: VCR 6.0.0
