@@ -90,7 +90,7 @@ bundle exec rspec
 You can also run individual spec files from the project directory. For example:
 
 ```bash
-bundle exec rspec spec/lib/gateway_spec.rb
+bundle exec rspec spec/lib/gateway/fake_spec.rb
 ```
 
 ## Design Choices
